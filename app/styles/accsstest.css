@@ -1,0 +1,23 @@
+body { margin: 0px; }
+#stage{
+	position: relative;
+	margin: 100px auto;
+	width: 320px;
+	height: 370px;
+	perspective: 1000px;
+}
+.container{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: solid 1px black;
+	background-color: #fff;
+	transform-style: preserve-3d;
+}
+.container:before {
+	position: absolute;
+	content:"";
+	width: 100%;
+	height: 1px;
+	background: url("../images/border-login.png") top left repeat-x;
+}
