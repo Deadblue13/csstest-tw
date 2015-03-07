@@ -7,7 +7,18 @@
 </head>
 <body>
 	<section id="stage">
-		<div class="container" id="container">
+		<div class="container">
+			<div class="after-login">
+				<a class="thumb"><img class="avatar"></a>
+				<p class="welcom">
+					欢迎回来<br>
+					<span class="username"></span>
+				</p>
+				<p class="notice">
+					<span>3</span>
+					秒后自动跳转...
+				</p>
+			</div>
 			<div class="form-login">
 				<h3>登录</h3>
 				<div class="area">
@@ -21,9 +32,10 @@
 				<a href="" class="forgot-password">忘记密码</a>
 				<a href="" class="reg">注册用户</a>
 				<span class="clearfix"></span>
-				<a href="" class="btn">登录</a>
+				<a href="javascript:login()" class="btn">登录</a>
 			</div>
 		</div>
 	</section>
+	<script src="scripts/accsstest.js"></script>
 </body>
 </html>

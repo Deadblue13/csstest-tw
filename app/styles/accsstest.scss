@@ -2,7 +2,9 @@ body,
 div,
 label,
 a,
-.clearfix { 
+.clearfix,
+span,
+p { 
 	margin: 0 auto;
 	padding: 0;
 	outline: 0;
@@ -13,6 +15,15 @@ a,
 	font-weight: inherit;
 	font-style: inherit;
 	font-family: inherit;
+}
+
+body {
+	position: static;
+	background: #fafafa;
+	font-size: 12px;
+	font-family: 'Microsoft YaHei';
+	line-height: 16px;
+	-webkit-font-smoothing: antialiased;
 }
 
 div {display: block;}
@@ -55,6 +66,7 @@ h3{
 	border-top: none;
 	background-color: #fff;
 	transform-style: preserve-3d;
+	transform-origin: 50% 50% -300px;
 }
 
 .container:before {
@@ -127,6 +139,78 @@ h3{
 	word-break: break-all;
 }
 
+.after-login {
+	display: none;
+}
 
+.after-login p {
+	display: block;
+}
 
+.after-login .welcom {
+	margin-top: 64px;
+	font-size: 14px;
+	line-height: 1.6;
+	color: #EC6BFE;
+}
+.login-success {
+	height: 240px;
+	margin-top: 68px;
+}
 
+.login-success .after-login {
+	display: block;
+	text-align: center;
+	margin-top: 68px;
+}
+
+.login-success .form-login {display: none;}
+
+.login-success .area-tool {display: none};
+
+@-webkit-keyframes fadein {
+	0%{-webkit-transform:translate3d(0,100px,2px);
+		-moz-transform:translate3d(0,100px,2px);
+		-o-transform:translate3d(0,100px,2px);
+		transform:translate3d(0,100px,2px);
+		opacity:0}
+	30%{-webkit-transform:translate3d(0,-10px,2px);
+		-moz-transform:translate3d(0,-10px,2px);
+		-o-transform:translate3d(0,-10px,2px);
+		transform:translate3d(0,-10px,2px);
+		opacity:1}
+	60%{-webkit-transform:translate3d(0,20px,2px);
+		-moz-transform:translate3d(0,20px,2px);
+		-o-transform:translate3d(0,20px,2px);
+		transform:translate3d(0,20px,2px)}
+	90%{
+		-webkit-transform:translate3d(0,-10px,2px);
+		-moz-transform:translate3d(0,-10px,2px);
+		-o-transform:translate3d(0,-10px,2px);
+		transform:translate3d(0,-10px,2px)}
+	100%{-webkit-transform:translate3d(0,7px,2px);
+		-moz-transform:translate3d(0,7px,2px);
+		-o-transform:translate3d(0,7px,2px);
+		transform:translate3d(0,7px,2px)}
+}
+
+.after-login .thumb {
+	position: absolute;
+	white-space: normal;
+	cursor: pointer;
+	user-select: none;
+	animation: fadein 4s ease both;
+	left: 50%;
+	margin-left: -54px;
+	top: -54px;
+}
+
+.after-login .avatar {
+	width: 108px;
+	height: 108px;
+}
+
+.after-login .notice {
+	margin-top: 16px;
+	color: #aaa;
+}
